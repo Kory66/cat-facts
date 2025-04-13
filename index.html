@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Lexend:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cat Generator</title>
+</head>
+<body>
+    <div class="cat-box">
+        <h1 class="cat-title">Cat Fact Generator</h1>
+        <img class="cat-image" id="cat-image">
+        <div class="fact-box">
+            <p id="cat-fact" class="cat-fact"></p>
+        </div>
+        <button onclick="getcat(); getfact();" class="cat-button">get CAT FACT!</button>
+    </div>
+
+<script>
+    const apiKey = 'live_qE15StrNyGR7Xa69XEXdUapFqZJUFfNxlS8n6G46VW89UAABom5Q5vKPdivEmPBP';
+    const apiUrl = 'https://api.thecatapi.com/v1/images/search';
+
+    const apiUrl2 = 'https://catfact.ninja';
+
+    async function getcat(){
+        const response = await fetch(apiUrl + '?api_key=${apiKey}');
+        var data = await response.json();
+
+        console.log(data)
+
+        document.getElementById('cat-image').src = data[0].url;
+    }
+
+    async function getfact(){
+        const response = await fetch(apiUrl2 + '/fact');
+        var data_fact = await response.json();
+
+        console.log(data_fact)
+
+        document.getElementById('cat-fact').textContent = data_fact.fact;
+    }
+    getfact();
+</script>
+</body>
+</html>
