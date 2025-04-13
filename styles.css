@@ -9,10 +9,10 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #e6dddc;
+    background-color: #C89DD8;
 }
 .cat-box{
-    background-color: #FADCD9;
+    background-color: #9A76A5;
     height: 800px;
     width: 600px;
     display: flex;
@@ -47,13 +47,13 @@ body{
     padding: 0.5em 1em;
     border: 0;
     border-radius: 0.5em;
-    background-color: #F8AFA6;
+    background-color: #E6DED3;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 .cat-button:hover
 {
-    background-color: #F79489;
+    background-color: #d4ccc1;
 }
 
 @media screen and (max-width: 460px){
