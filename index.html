@@ -18,7 +18,30 @@
         </div>
         <button onclick="getcat(); getfact();" class="cat-button">get CAT FACT!</button>
     </div>
+<script>
+    const apiKey = 'live_qE15StrNyGR7Xa69XEXdUapFqZJUFfNxlS8n6G46VW89UAABom5Q5vKPdivEmPBP';
+    const apiUrl = 'https://api.thecatapi.com/v1/images/search';
 
+    const apiUrl2 = 'https://catfact.ninja';
 
+    async function getcat(){
+        const response = await fetch(apiUrl + '?api_key=${apiKey}');
+        var data = await response.json();
+
+        console.log(data)
+
+        document.getElementById('cat-image').src = data[0].url;
+    }
+
+    async function getfact(){
+        const response = await fetch(apiUrl2 + '/fact');
+        var data_fact = await response.json();
+
+        console.log(data_fact)
+
+        document.getElementById('cat-fact').textContent = data_fact.fact;
+    }
+    getfact();
+</script>
 </body>
 </html>
