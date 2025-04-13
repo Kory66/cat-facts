@@ -9,10 +9,10 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #C89DD8;
+    background-color: #aa7995;
 }
 .cat-box{
-    background-color: #9A76A5;
+    background-color: #9C7CA5;
     height: 800px;
     width: 600px;
     display: flex;
@@ -47,13 +47,13 @@ body{
     padding: 0.5em 1em;
     border: 0;
     border-radius: 0.5em;
-    background-color: #E6DED3;
+    background-color: #B19FF9;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 .cat-button:hover
 {
-    background-color: #d4ccc1;
+    background-color: #9d8ddd;
 }
 
 @media screen and (max-width: 460px){
@@ -62,5 +62,12 @@ body{
 }
 .cat-button{
     font-size: 30px;
+}
+.cat-image{
+    max-height: 60%;
+    max-width: 80%;
+}
+.cat-box{
+    height:700px;
 }
 }
